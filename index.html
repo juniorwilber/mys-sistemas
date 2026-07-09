@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  MYS SISTEMAS — Landing page (tema "Tech Dinámico")
+  ------------------------------------------------------------
+  Tienda de tecnología y servicio técnico · La Convención, Cusco (Perú)
+  El HTML solo define la ESTRUCTURA y el CONTENIDO.
+  Los estilos están en  css/styles.css
+  La interactividad está en  js/main.js
+  ============================================================
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===================== SEO ===================== -->
+  <title>MYS SISTEMAS | Tecnología y Soporte Técnico en La Convención, Cusco</title>
+  <meta name="description" content="Tienda de tecnología y servicio técnico en La Convención, Cusco. Reparamos impresoras, computadoras y laptops; vendemos equipos HP, Lenovo, ASUS, Epson y Canon. Diagnóstico honesto y atención el mismo día.">
+  <meta name="keywords" content="soporte técnico Cusco, reparación de laptops, reparación de impresoras, venta de computadoras, MYS Sistemas, Pichari, Kimbiri, La Convención">
+  <meta name="author" content="MYS SISTEMAS">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a1526">
+  <link rel="canonical" href="https://www.myssistemas.com/">
+
+  <!-- Redes sociales (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MYS SISTEMAS | Tecnología y Soporte Técnico en Cusco">
+  <meta property="og:description" content="Soporte técnico y tecnología a tu alcance. Impresoras, laptops y PCs. Atención el mismo día en La Convención, Cusco.">
+  <meta property="og:image" content="assets/img/mascota-brazos.png">
+  <meta property="og:locale" content="es_PE">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Ícono de la pestaña -->
+  <link rel="icon" type="image/png" href="assets/img/mys-logo.png">
+
+  <!-- Tipografías (Manrope = cuerpo, Sora = títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos del sitio -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- ============================================================
+       DATOS DEL NEGOCIO para Google (Schema.org / JSON-LD).
+       Ayuda a que aparezca la ficha del negocio, horarios y sedes
+       en los resultados de búsqueda. Edita aquí tus datos reales.
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ElectronicsStore",
+    "name": "MYS SISTEMAS",
+    "description": "Tienda de tecnología y servicio técnico: reparación de impresoras, computadoras y laptops, venta de equipos e insumos.",
+    "image": "assets/img/mascota-brazos.png",
+    "telephone": "+51987547461",
+    "priceRange": "$$",
+    "areaServed": "La Convención, Cusco, Perú",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": ["https://www.facebook.com/p/MYS-Sistemas-100092190970664/"],
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Sucursal Brasil",
+        "address": { "@type": "PostalAddress", "streetAddress": "Av. Brasil s/n, Pichari", "addressRegion": "Cusco", "addressCountry": "PE" }
+      },
+      {
+        "@type": "Place",
+        "name": "Sucursal La Cultura",
+        "address": { "@type": "PostalAddress", "streetAddress": "Av. La Cultura N° 525, Pichari", "addressRegion": "Cusco", "addressCountry": "PE" }
+      },
+      {
+        "@type": "Place",
+        "name": "Sucursal Kimbiri",
+        "address": { "@type": "PostalAddress", "streetAddress": "Av. Los Ángeles, Kimbiri", "addressRegion": "Cusco", "addressCountry": "PE" }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Enlace de accesibilidad: permite saltar directo al contenido con el teclado -->
+  <a href="#servicios" class="skip-link">Saltar al contenido</a>
+
+  <!-- ============================================================
+       HERO OSCURO (incluye el encabezado/menú dentro)
+       ============================================================ -->
+  <header class="hero" id="inicio">
+    <!-- Decoración de fondo: cuadrícula y luces de color -->
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--azul" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--rojo" aria-hidden="true"></div>
+
+    <!-- Barra de navegación -->
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio" class="nav__logo" aria-label="MYS SISTEMAS - Inicio">
+        <img src="assets/img/mys-logo-dark.png" alt="Logo de MYS SISTEMAS" width="140" height="52">
+      </a>
+
+      <!-- Botón hamburguesa: solo visible en celular. Lo controla js/main.js -->
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <!-- Menú de enlaces -->
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__links">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#sucursales" class="nav__link">Sucursales</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <!-- CTA de WhatsApp dentro del menú (útil en celular) -->
+        <a href="https://wa.me/51987547461?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios"
+           target="_blank" rel="noopener" class="btn btn--rojo nav__cta">
+          <i data-lucide="message-circle" aria-hidden="true"></i>Contáctanos
+        </a>
+      </div>
+    </nav>
+
+    <!-- Contenido del hero -->
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="badge"><span class="badge__dot" aria-hidden="true"></span>Cusco · La Convención</p>
+        <h1 class="hero__title">Soporte técnico y <span class="txt-rojo">tecnología</span> a tu alcance.</h1>
+        <p class="hero__desc">Reparamos impresoras, computadoras y laptops, y te equipamos con los productos e insumos que tu día a día necesita. Rápido, honesto y cerca de ti.</p>
+
+        <div class="hero__actions">
+          <a href="https://wa.me/51987547461?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios"
+             target="_blank" rel="noopener" class="btn btn--rojo btn--lg">
+            <i data-lucide="message-circle" aria-hidden="true"></i>Contáctanos por WhatsApp
+          </a>
+          <a href="#servicios" class="btn btn--ghost btn--lg">Ver servicios<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <!-- Íconos de refuerzo -->
+        <ul class="hero__features">
+          <li><i data-lucide="printer" class="ico-azul" aria-hidden="true"></i>Impresoras</li>
+          <li><i data-lucide="laptop" class="ico-rojo" aria-hidden="true"></i>Laptops &amp; PCs</li>
+          <li><i data-lucide="cpu" class="ico-azul" aria-hidden="true"></i>Componentes</li>
+        </ul>
+      </div>
+
+      <!-- Imagen de la mascota con tarjetas flotantes -->
+      <div class="hero__media">
+        <div class="hero__mascota-box">
+          <img src="assets/img/mascota-brazos.png" alt="Mascota de MYS SISTEMAS saludando" class="hero__mascota" width="420" height="525">
+        </div>
+        <div class="floating-card floating-card--top">
+          <p>¡Hola! ¿En qué puedo ayudarte hoy?</p>
+        </div>
+        <a href="https://wa.me/51987547461" target="_blank" rel="noopener" class="floating-card floating-card--wa">
+          <span class="floating-card__icon"><i data-lucide="message-circle" aria-hidden="true"></i></span>
+          <span>
+            <span class="floating-card__label">WhatsApp</span>
+            <span class="floating-card__num">987 547 461</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- ============================================================
+         SERVICIOS
+         ============================================================ -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="eyebrow">Servicios</p>
+            <h2 class="section__title">Lo que hacemos por ti</h2>
+          </div>
+          <div class="section__head-aside">
+            <img src="assets/img/mascota-celular.png" alt="Mascota de MYS SISTEMAS con un celular" width="118" height="118" loading="lazy">
+            <p>Tres líneas de trabajo para mantener tu tecnología siempre en marcha. Nuestro asistente te orienta.</p>
+          </div>
+        </div>
+
+        <div class="servicios">
+          <article class="servicio servicio--rojo">
+            <span class="servicio__num">01</span>
+            <span class="servicio__icon"><i data-lucide="wrench" aria-hidden="true"></i></span>
+            <h3>Soporte técnico</h3>
+            <p>Reparación y mantenimiento de impresoras, computadoras y laptops con diagnóstico honesto.</p>
+          </article>
+          <article class="servicio servicio--azul">
+            <span class="servicio__num">02</span>
+            <span class="servicio__icon"><i data-lucide="shopping-bag" aria-hidden="true"></i></span>
+            <h3>Venta de productos</h3>
+            <p>Impresoras, laptops y PCs originales, con asesoría para que elijas el equipo ideal.</p>
+          </article>
+          <article class="servicio servicio--tinta">
+            <span class="servicio__num">03</span>
+            <span class="servicio__icon"><i data-lucide="package" aria-hidden="true"></i></span>
+            <h3>Insumos y accesorios</h3>
+            <p>Tintas, tóners, componentes y accesorios siempre en stock y a buen precio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NOSOTROS (fondo oscuro)
+         ============================================================ -->
+    <section class="section section--dark" id="nosotros">
+      <div class="section__grid-bg" aria-hidden="true"></div>
+      <div class="container nosotros">
+        <div class="nosotros__text">
+          <p class="eyebrow">Nosotros</p>
+          <h2 class="section__title section__title--light">Confía tus equipos a quienes saben de tecnología</h2>
+          <p class="nosotros__desc">En <strong>MYS SISTEMAS</strong> unimos experiencia técnica con un trato cercano y transparente. Somos tu aliado tecnológico en la región de Cusco: reparamos, vendemos y asesoramos para que tu tecnología nunca te detenga.</p>
+          <ul class="chips">
+            <li class="chip"><i data-lucide="shield-check" class="ico-azul" aria-hidden="true"></i>Equipos seguros</li>
+            <li class="chip"><i data-lucide="zap" class="ico-rojo" aria-hidden="true"></i>Atención el mismo día</li>
+            <li class="chip"><i data-lucide="cpu" class="ico-azul" aria-hidden="true"></i>Repuestos reales</li>
+          </ul>
+        </div>
+        <!-- Foto de referencia. Reemplázala por una foto real de tu tienda/taller. -->
+        <div class="nosotros__img" role="img" aria-label="Equipo de trabajo de MYS SISTEMAS"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MARCAS
+         ============================================================ -->
+    <section class="section section--marcas">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow">Marcas que trabajamos</p>
+          <h2 class="section__title">Manejamos marcas reconocidas</h2>
+          <p class="section__sub">Productos originales y repuestos de las marcas líderes en tecnología.</p>
+        </div>
+        <ul class="marcas">
+          <li class="marca">HP</li>
+          <li class="marca">Lenovo</li>
+          <li class="marca">ASUS</li>
+          <li class="marca">MSI</li>
+          <li class="marca">DELL</li>
+          <li class="marca">EPSON</li>
+          <li class="marca">Canon</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SUCURSALES
+         ============================================================ -->
+    <section class="section" id="sucursales">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow">Sucursales</p>
+          <h2 class="section__title">Tres tiendas para atenderte</h2>
+        </div>
+        <ul class="sucursales">
+          <li class="sucursal">
+            <span class="sucursal__icon sucursal__icon--rojo"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+            <div class="sucursal__info">
+              <h3>Sucursal Brasil</h3>
+              <p>Av. Brasil s/n, Pichari, La Convención, Cusco</p>
+            </div>
+            <a href="https://www.google.com/maps/search/Av.+Brasil+Pichari+La+Convenci%C3%B3n+Cusco" target="_blank" rel="noopener" class="link-arrow">Cómo llegar<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </li>
+          <li class="sucursal">
+            <span class="sucursal__icon sucursal__icon--azul"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+            <div class="sucursal__info">
+              <h3>Sucursal La Cultura</h3>
+              <p>Av. La Cultura N° 525, Pichari, La Convención, Cusco</p>
+            </div>
+            <a href="https://www.google.com/maps/search/Av.+La+Cultura+525+Pichari+La+Convenci%C3%B3n+Cusco" target="_blank" rel="noopener" class="link-arrow">Cómo llegar<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </li>
+          <li class="sucursal">
+            <span class="sucursal__icon sucursal__icon--tinta"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+            <div class="sucursal__info">
+              <h3>Sucursal Kimbiri</h3>
+              <p>Av. Los Ángeles, Kimbiri, La Convención, Cusco</p>
+            </div>
+            <a href="https://www.google.com/maps/search/Av.+Los+Angeles+Kimbiri+La+Convenci%C3%B3n+Cusco" target="_blank" rel="noopener" class="link-arrow">Cómo llegar<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACTO + HORARIO + FORMULARIO
+         ============================================================ -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contacto">
+          <!-- Panel rojo: mensaje + formulario que arma un mensaje de WhatsApp -->
+          <div class="contacto__main">
+            <img src="assets/img/mascota-laptop.png" alt="Mascota de MYS SISTEMAS con una laptop" class="contacto__mascota" width="200" height="240" loading="lazy">
+            <h2 class="contacto__title">¿Listo para resolver tu problema tecnológico?</h2>
+            <p class="contacto__desc">Déjanos tus datos y arma tu consulta: se enviará directo a nuestro WhatsApp para atenderte al instante.</p>
+
+            <!-- Formulario con validación (ver js/main.js). No recarga la página:
+                 compone el mensaje y abre WhatsApp con el texto ya escrito. -->
+            <form class="form" id="contactForm" novalidate>
+              <div class="form__row">
+                <div class="form__field">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="2" autocomplete="name">
+                  <small class="form__error" data-error-for="nombre"></small>
+                </div>
+                <div class="form__field">
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="987 654 321" required inputmode="numeric" autocomplete="tel">
+                  <small class="form__error" data-error-for="telefono"></small>
+                </div>
+              </div>
+              <div class="form__field">
+                <label for="mensaje">¿En qué te ayudamos?</label>
+                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej: Mi impresora Epson no imprime en color..." required minlength="5"></textarea>
+                <small class="form__error" data-error-for="mensaje"></small>
+              </div>
+              <button type="submit" class="btn btn--wa btn--lg btn--block">
+                <i data-lucide="message-circle" aria-hidden="true"></i>Enviar por WhatsApp
+              </button>
+              <p class="form__ok" id="formOk" role="status" hidden>¡Listo! Abriendo WhatsApp con tu consulta…</p>
+            </form>
+
+            <p class="contacto__phone"><i data-lucide="phone" aria-hidden="true"></i>También al teléfono <a href="tel:+51987547461">987 547 461</a></p>
+          </div>
+
+          <!-- Panel oscuro: horario de atención -->
+          <aside class="horario" aria-label="Horario de atención">
+            <div class="horario__head">
+              <span class="horario__icon"><i data-lucide="clock" aria-hidden="true"></i></span>
+              <h3>Horario</h3>
+            </div>
+            <dl class="horario__list">
+              <div class="horario__item">
+                <dt>Lun – Vie</dt>
+                <dd>8am – 8pm</dd>
+              </div>
+              <div class="horario__item">
+                <dt>Sábados</dt>
+                <dd>8am – 6pm</dd>
+              </div>
+            </dl>
+            <a href="https://www.facebook.com/p/MYS-Sistemas-100092190970664/" target="_blank" rel="noopener" class="btn btn--ghost-light horario__fb">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="icon-svg" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.09 1.48-4.09 4.21v2.35H7.7V13h2.75v8h3.05z"/></svg>Síguenos en Facebook
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <img src="assets/img/mys-logo-dark.png" alt="Logo de MYS SISTEMAS" class="footer__logo" width="160" height="62" loading="lazy">
+        <p class="footer__about">Tienda de tecnología y servicio técnico en La Convención, Cusco. Soporte, venta e insumos.</p>
+      </div>
+      <div>
+        <h2 class="footer__title">Contacto</h2>
+        <ul class="footer__list">
+          <li><a href="tel:+51987547461"><i data-lucide="phone" class="ico-rojo" aria-hidden="true"></i>987 547 461</a></li>
+          <li><a href="https://wa.me/51987547461" target="_blank" rel="noopener"><i data-lucide="message-circle" class="ico-wa" aria-hidden="true"></i>WhatsApp</a></li>
+          <li><a href="https://www.facebook.com/p/MYS-Sistemas-100092190970664/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" class="icon-svg ico-azul" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.09 1.48-4.09 4.21v2.35H7.7V13h2.75v8h3.05z"/></svg>Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__title">Sucursales</h2>
+        <ul class="footer__list footer__list--plain">
+          <li>Av. Brasil s/n, Pichari</li>
+          <li>Av. La Cultura N° 525, Pichari</li>
+          <li>Av. Los Ángeles, Kimbiri</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 MYS SISTEMAS · La Convención, Cusco, Perú. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (siempre visible) -->
+  <a href="https://wa.me/51987547461?text=Hola%20MYS%20SISTEMAS,%20quisiera%20una%20cotizaci%C3%B3n"
+     target="_blank" rel="noopener" class="wa-float" aria-label="Escríbenos por WhatsApp">
+    <i data-lucide="message-circle" aria-hidden="true"></i>
+  </a>
+
+  <!-- Librería de íconos Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Lógica del sitio -->
+  <script src="js/main.js"></script>
+</body>
+</html>
