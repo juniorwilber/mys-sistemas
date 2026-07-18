@@ -17,7 +17,7 @@ Landing page para **MYS Sistemas**, una tienda de tecnología y servicio técnic
 ## 🖼️ Captura de pantalla
 
 <!-- Reemplaza la ruta por tu captura, por ejemplo: assets/img/screenshot.png -->
-![Captura de pantalla de MYS Sistemas](URL_DE_LA_CAPTURA)
+![Captura de pantalla de MYS Sistemas](assets/img/screenshot.png)
 
 ---
 
